@@ -8,7 +8,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class CaculatorComponent implements OnInit {
   num1;
   num2;
-  @Output() total = new EventEmitter<number>();
+  color: string = "red";
+  @Output() total = new EventEmitter<any>();
 
 
   constructor() {
@@ -22,5 +23,10 @@ export class CaculatorComponent implements OnInit {
   out(value: number): void {
     this.total.emit(value);
   }
+  onChange(color: string) {
+    this.color = color;
+  }
+
+
 }
 

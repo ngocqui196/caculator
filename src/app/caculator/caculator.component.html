@@ -1,4 +1,8 @@
 <input type="number" [(ngModel)]="num1">
 <input type="number" [(ngModel)]="num2">
 <button (click)="out(sum())">Submit</button>
+<br>
+<input type="text" (change)="onChange($event.target.value)">
 
+<div [ngStyle]="{'background': color,
+                  'border': '1px'}" style="width: 300px; height: 100px"></div>
